@@ -23,9 +23,5 @@ mongoose.connect(process.env.DB_URI, {
   console.log('DB connection error: ', err)
 })
 
-app.get('/', (req, res) => {
-  res.send('Hello world')
-})
-
 app.use(require('./routes/authRoutes'))
 app.use(require('./routes/tokenRoute'))
